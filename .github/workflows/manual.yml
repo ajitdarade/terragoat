@@ -19,7 +19,7 @@ jobs:
         iac_version: 'v14'
         policy_type: 'aws'
         only_warn: true
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: ajitdarade/terragoat/terrascan.sarif
+#    - name: Upload SARIF file
+#      uses: github/codeql-action/upload-sarif@v1
+#      with:
+#        sarif_file: ajitdarade/terragoat/terrascan.sarif
