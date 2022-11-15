@@ -29,12 +29,12 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t ajitddarade/docker-images:${{ github.sha }} .
+          docker build -t home/runner/work/_actions/aquasecurity/trivy-action/7b7aa264d83dc58691451798b4d117d53d21edfe/Dockerfile .
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
-          image-ref: 'ajitddarade/docker-images:${{ github.sha }}'
+          image-ref: 'home/runner/work/_actions/aquasecurity/trivy-action/7b7aa264d83dc58691451798b4d117d53d21edfe/Dockerfile'
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
